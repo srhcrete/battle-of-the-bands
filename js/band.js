@@ -23,6 +23,16 @@ export class Band {
       return dice;
     }
   }
+
+  groupie() {
+    if (this.fans % 10 == 0) {
+      this.characters.push("groupie");
+    }
+    // else {
+    //   break;
+    // }
+  }
+
 }
 
 // Band.prototype.addCharacters = function(character){

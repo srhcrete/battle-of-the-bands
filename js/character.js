@@ -1,11 +1,19 @@
-function Character(gender, instrument, type) {
-  this.gender = gender;
-  this.instrument = instrument;
-  this.type = type;
-  this.inventory = [];
+export class Character {
+  constructor(name, gender, instrument, type) {
+    this.name = name;
+    this.gender = gender;
+    this.instrument = instrument;
+    this.type = type;
+    this.inventory = [];
+
+  }
+
+  addInventory(item) {
+    this.inventory.push(item);
+  }
+
+  upgradeType(newType) {
+    this.type = newType;
+  }
+
 }
-
-// Character.prototype.
-
-// Character.prototype.addToCharacters = function() {
-//

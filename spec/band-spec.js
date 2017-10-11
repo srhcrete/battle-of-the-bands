@@ -11,7 +11,7 @@ describe('Band', function () {
   });
 
   it('should add a character to a band', function() {
-    bandito.addCharacters('Lilly');
+    bandito.addCharacters("Lilly");
     expect(bandito.characters).toEqual(['Lilly']);
   });
 
@@ -24,11 +24,15 @@ describe('Band', function () {
     bandito.roll();
     expect(bandito.fans).toEqual(0);
   });
-  // it('adds characters to band', function() {
-  //   click.button('#add-button')
-  // });
-  //above will go in band-interface-spec file
+
+  it('should add a groupie for every 10 fans', function() {
+    bandito.fans = 20;
+    bandito.groupie();
+    console.log(bandito.characters);
+    expect(bandito.characters).toEqual(['Lilly',"groupie"]);
   });
+
+});
 
 
 
