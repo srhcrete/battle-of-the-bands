@@ -1,13 +1,18 @@
-var Band = require('./../js/band.js').bandModule;
+import { Band } from './../js/band.js';
+var bandito = new Band("Bandito");
 
 describe('Band', function () {
   it('should have a name', function () {
-    var bandito = new Band("Bandito");
-    console.log(bandito.name);
     expect(bandito.name).toEqual("Bandito");
-    // expect(bandito.characters).toEqual([]);
   });
+
+  it('characters to equal empty array', function() {
+    expect(bandito.characters).toEqual([]);
+  });
+
 });
+
+
 
 
 
