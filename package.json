@@ -2,7 +2,7 @@
   "name": "battle-of-the-bands",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "test": "karma start karma.conf.js"
   },

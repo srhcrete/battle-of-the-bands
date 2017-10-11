@@ -1,2 +1,5 @@
 node_modules/
-DS.store/
+DS.store
+bower_components
+build
+tmp
