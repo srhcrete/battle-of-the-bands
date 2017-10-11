@@ -15,6 +15,15 @@ describe('Band', function () {
     expect(bandito.characters).toEqual(['Lilly']);
   });
 
+  it('should return a number when band rolls', function() {
+    expect(bandito.roll()).toEqual(jasmine.any(Number));
+  });
+
+  it('should alert and set fans to zero when a 1 is rolled', function() {
+    bandito.level = 1;
+    bandito.roll();
+    expect(bandito.fans).toEqual(0);
+  });
   // it('adds characters to band', function() {
   //   click.button('#add-button')
   // });
