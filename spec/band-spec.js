@@ -10,7 +10,16 @@ describe('Band', function () {
     expect(bandito.characters).toEqual([]);
   });
 
-});
+  it('should add a character to a band', function() {
+    bandito.addCharacters('Lilly');
+    expect(bandito.characters).toEqual(['Lilly']);
+  });
+
+  // it('adds characters to band', function() {
+  //   click.button('#add-button')
+  // });
+  //above will go in band-interface-spec file
+  });
 
 
 
