@@ -5,8 +5,36 @@
     <link href="build/css/vendor.css" rel="stylesheet" type="text/css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
+    <title>Bands Battle</title>
   </head>
   <body>
-    sup dude
+    <h1>Battle of the Bands</h1>
+    <h5>Make a new band:</h5>
+    <form id="band-form">
+      <label for="bandName">Enter the new band name:</label>
+      <input type="text" name="bandName" id="band-name">
+      <a href="/bands.html"><button type="submit">Submit</button></a>
+    </form>
+
+    <div class="container">
+      <h5>Bands</h5>
+      <ul id="band-list">
+
+
+      </ul>
+    </div>
+
+    <h5>Make a new character:</h5>
+    <form id="character-form">
+      <label for="characterName">Enter the new characer name:</label>
+      <input type="text" name="characterName" id="characterName">
+      <label for="gender">Enter the new characer gender:</label>
+      <input type="text" name="gender" id="gender">
+      <label for="instrument">Enter the new characer instrument:</label>
+      <input type="text" name="instrument" id="instrument">
+      <label for="type">Enter the new characer type:</label>
+      <input type="text" name="type" id="type">
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>

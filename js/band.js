@@ -35,6 +35,4 @@ export class Band {
 
 }
 
-// Band.prototype.addCharacters = function(character){
-//   this.character.push(character);
-// };
+// exports.bandModule = BandMod;
