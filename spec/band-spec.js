@@ -1,10 +1,10 @@
 var Band = require('./../js/band.js').bandModule;
 
-describe('Band', function() {
-  it('should have no charaters at the start', function() {
-    var bandito = new Band('Bandito');
-    console.log(bandito);
-    expect(bandito.name.toEqual('Bandito'));
+describe('Band', function () {
+  it('should have a name', function () {
+    var bandito = new Band("Bandito");
+    console.log(bandito.name);
+    expect(bandito.name).toEqual("Bandito");
     // expect(bandito.characters).toEqual([]);
   });
 });

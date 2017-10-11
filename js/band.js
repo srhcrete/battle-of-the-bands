@@ -11,12 +11,5 @@ Band.prototype.addCharacters = function(character){
   this.character.push(character);
 };
 
-// Band.prototype.battle = function (){
-//
-// };
-
-
-
-
 
 exports.bandModule = Band;
