@@ -16,8 +16,10 @@ $(document).ready(function() {
     console.log(bandArr);
     console.log(bandName);
     console.log(newBand);
-    $("#band-list").append("<li>" + "<a href='band.html'>" + newBand.name + "</a>" + "</.li>");
+    $("#band-list").append("<li>" linkid=newband.id+ "<a href='band.html'>" + newBand.name + "</a>" + "</li>");
+    $("#band").append("<h3>" + newBand.name + "</h3>");
   });
+
 });
 
 import { Character } from './../js/character.js';
