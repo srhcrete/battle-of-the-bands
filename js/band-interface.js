@@ -11,6 +11,8 @@ $(document).ready(function() {
     var bandName = $("#band-name").val();
     var newBand = new Band(bandName);
     bandArr.push(newBand);
+    newBand.id = bandArr.length;
+    console.log(newBand.id)
     console.log(bandArr);
     console.log(bandName);
     console.log(newBand);

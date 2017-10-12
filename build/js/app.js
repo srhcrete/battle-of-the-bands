@@ -19,6 +19,7 @@ var Band = exports.Band = function () {
     this.fans = 1;
     this.level = 4;
     this.characters = [];
+    this.id = 0;
   }
 
   _createClass(Band, [{
@@ -112,6 +113,8 @@ $(document).ready(function () {
     var bandName = $("#band-name").val();
     var newBand = new _band.Band(bandName);
     bandArr.push(newBand);
+    newBand.id = bandArr.length;
+    console.log(newBand.id);
     console.log(bandArr);
     console.log(bandName);
     console.log(newBand);

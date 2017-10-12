@@ -6,6 +6,7 @@ export class Band {
     this.fans = 1;
     this.level = 4;
     this.characters = [];
+    this.id = 0;
   }
 
 
