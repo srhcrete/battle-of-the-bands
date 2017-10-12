@@ -59,7 +59,46 @@ var Band = exports.Band = function () {
 },{}],2:[function(require,module,exports){
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Character = exports.Character = function () {
+  function Character(name, gender, instrument, type) {
+    _classCallCheck(this, Character);
+
+    this.name = name;
+    this.gender = gender;
+    this.instrument = instrument;
+    this.type = type;
+    this.inventory = [];
+  }
+
+  _createClass(Character, [{
+    key: "addInventory",
+    value: function addInventory(item) {
+      this.inventory.push(item);
+    }
+  }, {
+    key: "upgradeType",
+    value: function upgradeType(newType) {
+      this.type = newType;
+    }
+  }]);
+
+  return Character;
+}();
+
+},{}],3:[function(require,module,exports){
+"use strict";
+
 var _band = require("./../js/band.js");
+
+var _character = require("./../js/character.js");
 
 // var Band = require('./../js/band.js').bandModule;
 // exports.bandModule = BandMod;
@@ -77,4 +116,23 @@ $(document).ready(function () {
   });
 });
 
-},{"./../js/band.js":1}]},{},[2]);
+// var Band = require('./../js/band.js').bandModule;
+// exports.bandModule = BandMod;
+
+
+$(document).ready(function () {
+  $("#character-form").submit(function (event) {
+    event.preventDefault();
+    var characterName = $("#characterName").val();
+    var gender = $("#gender").val();
+    var instrument = $("#instrument").val();
+    var type = $("#type").val();
+    var newCharacter = new _character.Character(characterName, gender, instrument, type);
+    // newCharacter.name = characterName;
+    console.log(characterName);
+    console.log(newCharacter);
+    $("#character-list").append("<li>" + newCharacter.name + "</.li>");
+  });
+});
+
+},{"./../js/band.js":1,"./../js/character.js":2}]},{},[3]);
