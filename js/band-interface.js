@@ -11,6 +11,6 @@ $(document).ready(function() {
     newBand.name = bandName;
     console.log(bandName);
     console.log(newBand);
-    $("#band-list").append("<li>" + newBand.name + "</.li>");
+    $("#band-list").append("<li>" + "<a href='band.html'>" + newBand.name + "</a>" + "</.li>");
   });
 });

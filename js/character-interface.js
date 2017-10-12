@@ -14,6 +14,10 @@ $(document).ready(function() {
     // newCharacter.name = characterName;
     console.log(characterName);
     console.log(newCharacter);
-    $("#character-list").append("<li>" + newCharacter.name + "</.li>");
+    $("#character-list").append("<li>" + "<a href='character.html'>" + newCharacter.name + "</a>" + "</.li>");
+
+  //   <div class="sidebar">
+  //   <h2>About Me: Click on the image<a href="author.html"> <img src="img/author.jpg" alt="author" class="img-responsive"> </a>to learn about the author</h2>
+  // </div>
   });
 });

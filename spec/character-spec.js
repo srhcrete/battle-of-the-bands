@@ -5,7 +5,7 @@ describe('Character', function () {
   it('should have a name', function () {
     expect(lilly.name).toEqual("Lilly");
   });
-
+  
   it('characters to equal empty inventory', function() {
     expect(lilly.inventory).toEqual([]);
   });
