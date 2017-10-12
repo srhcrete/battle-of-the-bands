@@ -64,11 +64,11 @@ var _band = require("./../js/band.js");
 // var Band = require('./../js/band.js').bandModule;
 // exports.bandModule = BandMod;
 
-var newBand = new _band.Band(" ");
 
 $(document).ready(function () {
   $("#band-form").submit(function (event) {
     event.preventDefault();
+    var newBand = new _band.Band(" ");
     var bandName = $("#band-name").val();
     newBand.name = bandName;
     console.log(bandName);
