@@ -8,6 +8,8 @@ export class Band {
     this.characters = [];
   }
 
+
+
   addCharacters(character) {
     this.characters.push(character);
   }

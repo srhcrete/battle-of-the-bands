@@ -2,13 +2,16 @@ import { Band } from './../js/band.js';
 // var Band = require('./../js/band.js').bandModule;
 // exports.bandModule = BandMod;
 
+var bandArr = [];
 
 $(document).ready(function() {
   $("#band-form").submit(function(event) {
     event.preventDefault();
-    var newBand = new Band(" ");
+    console.log(bandArr);
     var bandName = $("#band-name").val();
-    newBand.name = bandName;
+    var newBand = new Band(bandName);
+    bandArr.push(newBand);
+    console.log(bandArr);
     console.log(bandName);
     console.log(newBand);
     $("#band-list").append("<li>" + "<a href='band.html'>" + newBand.name + "</a>" + "</.li>");
@@ -31,7 +34,7 @@ $(document).ready(function() {
     // newCharacter.name = characterName;
     console.log(characterName);
     console.log(newCharacter);
-    $("#character-list").append("<li>" + "<a href='character.html'>" + newCharacter.name + "</a>" + "</.li>");
+    $("#character-list").append("<li>" + "<a href='character.html'>" + newCharacter.name + "</a>" + "</li>");
 
   //   <div class="sidebar">
   //   <h2>About Me: Click on the image<a href="author.html"> <img src="img/author.jpg" alt="author" class="img-responsive"> </a>to learn about the author</h2>
