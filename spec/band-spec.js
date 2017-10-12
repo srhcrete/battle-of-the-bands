@@ -1,4 +1,4 @@
-import { Band } from './../js/band.js';
+import { Band, Character } from './../js/band.js';
 var bandito = new Band("Bandito");
 
 describe('Band', function () {

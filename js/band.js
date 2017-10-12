@@ -9,8 +9,6 @@ export class Band {
     this.id = 0;
   }
 
-
-
   addCharacters(character) {
     this.characters.push(character);
   }
@@ -28,14 +26,27 @@ export class Band {
   }
 
   groupie() {
-    if (this.fans % 10 == 0) {
+    if (this.fans % 100 == 0) {
       this.characters.push("groupie");
     }
-    // else {
-    //   break;
-    // }
   }
-
 }
 
-// exports.bandModule = BandMod;
+export class Character {
+  constructor(name, gender, instrument, type) {
+    this.name = name;
+    this.gender = gender;
+    this.instrument = instrument;
+    this.type = type;
+    this.inventory = [];
+
+  }
+
+  addInventory(item) {
+    this.inventory.push(item);
+  }
+
+  upgradeType(newType) {
+    this.type = newType;
+  }
+}

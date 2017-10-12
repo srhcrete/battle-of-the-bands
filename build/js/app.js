@@ -43,30 +43,14 @@ var Band = exports.Band = function () {
   }, {
     key: "groupie",
     value: function groupie() {
-      if (this.fans % 10 == 0) {
+      if (this.fans % 100 == 0) {
         this.characters.push("groupie");
       }
-      // else {
-      //   break;
-      // }
     }
   }]);
 
   return Band;
 }();
-
-// exports.bandModule = BandMod;
-
-},{}],2:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var Character = exports.Character = function () {
   function Character(name, gender, instrument, type) {
@@ -94,15 +78,10 @@ var Character = exports.Character = function () {
   return Character;
 }();
 
-},{}],3:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 "use strict";
 
 var _band = require("./../js/band.js");
-
-var _character = require("./../js/character.js");
-
-// var Band = require('./../js/band.js').bandModule;
-// exports.bandModule = BandMod;
 
 var bandArr = [];
 
@@ -118,32 +97,25 @@ $(document).ready(function () {
     console.log(bandArr);
     console.log(bandName);
     console.log(newBand);
-    $("#band-list").append("<li>" + "<a href='band.html'>" + newBand.name + "</a>" + "</li>");
-    $("#band").append("<h3>" + newBand.name + "</h3>");
+    $("#band-list").append("<li>" + "<a href=''>" + newBand.name + "</a>" + "</li>");
+    console.log("#band");
   });
-});
 
-// var Band = require('./../js/band.js').bandModule;
-// exports.bandModule = BandMod;
+  $("#band-list li").click(function (event) {
+    $("#character-form").hide();
+  });
 
-
-$(document).ready(function () {
   $("#character-form").submit(function (event) {
     event.preventDefault();
     var characterName = $("#characterName").val();
     var gender = $("#gender").val();
     var instrument = $("#instrument").val();
     var type = $("#type").val();
-    var newCharacter = new _character.Character(characterName, gender, instrument, type);
-    // newCharacter.name = characterName;
+    var newCharacter = new _band.Character(characterName, gender, instrument, type);
     console.log(characterName);
     console.log(newCharacter);
-    $("#character-list").append("<li>" + "<a href='character.html'>" + newCharacter.name + "</a>" + "</li>");
-
-    //   <div class="sidebar">
-    //   <h2>About Me: Click on the image<a href="author.html"> <img src="img/author.jpg" alt="author" class="img-responsive"> </a>to learn about the author</h2>
-    // </div>
+    $("#character-list").append("<li>" + "<a href=''>" + newCharacter.name + "</a>" + "</li>");
   });
 });
 
-},{"./../js/band.js":1,"./../js/character.js":2}]},{},[3]);
+},{"./../js/band.js":1}]},{},[2]);
